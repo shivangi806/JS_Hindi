@@ -41,10 +41,24 @@ function fun() {
 }
 
 (function fun(){
-    console.log(9000000000);
+    // console.log(9000000000);
 })(); // semicolon req
 
 (()=>{
-    console.log(299999);
+    // console.log(299999);
 })()
+
+
+
+
+const arr = [1,2,3,4,5,6,7,8];
+
+// const ans = arr.filter((values)=>(values>4));
+const ans = [];
+arr.forEach((values)=>{
+    if(values>4){
+        ans.push(values);
+    }
+})
+console.log(ans);
 
