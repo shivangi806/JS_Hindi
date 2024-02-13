@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button{
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shivangi on Fire 🔥</h1>
+    <buttton id="start" class="button">Start</buttton>
+    <buttton id="stop" class="button">Stop</buttton>
+</body>
+
+    <script>
+        // const sayhi = function(str){
+        //     console.log(str,Date.now());
+        // }
+        // setInterval(sayhi,2000,"shivangi");
+        // start click karne pe printing start ho jae and stop karne p stop ho jae
+        const start = document.querySelector('#start');
+        let logname;
+        start.addEventListener('click',function(){
+            logname = setInterval(function(){
+                console.log("Shivangi");
+            },1000);
+        });
+
+        const stop = document.querySelector('#stop');
+        stop.addEventListener('click',function(){
+            clearTimeout(logname);
+        })
+
+    </script>
+</html>
