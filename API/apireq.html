@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Now i will be going to learn API </h1>
+</body>
+
+<script>
+    // need of xmhttprequest
+
+    const xhr = new XMLHttpRequest();
+    const requrl = "https://api.github.com/users/hiteshchoudhary";
+
+    xhr.open('GET',requrl);
+    // to see if tit is running or not we will check console log for readyState value
+    // console.log(xhr.readyState);
+
+    // loop me readyState k values ko print karo
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+    }
+    xhr.send();
+</script>
+</html>
